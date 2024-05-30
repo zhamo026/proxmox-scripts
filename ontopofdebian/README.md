@@ -15,9 +15,7 @@ echo "deb [arch=amd64] http://download.proxmox.com/debian/pve bookworm pve-no-su
 update they keyerings
 
 ```bash
-
-```bash
 lvremove /dev/pve/data
 lvresize -l +100%FREE /dev/pve/root
 resize2fs /dev/mapper/pve-root
-```bash
+```
