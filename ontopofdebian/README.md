@@ -28,6 +28,7 @@ uncomment port 22 [add your port]
 if necessary uncomment
 PermitRootLogin and add yes
 
+reboot
 ```
 
 add dependency repositories
