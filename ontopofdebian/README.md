@@ -9,7 +9,16 @@ ip r
 ip address show
 ```
 
-2. If your ip isn't showing you need to add the ip to the local host file 
+2. SSH into the CLI and run these commands
+```bash
+nano /etc/ssh/sshd_config
+uncomment port 22 [add your port]
+if necessary uncomment
+PermitRootLogin and add yes
+
+reboot
+```
+3. If your ip isn't showing you need to add the ip to the local host file 
 ```bash
 hostnamectl set-hostname [addhostname*]
 exec bash
@@ -21,15 +30,7 @@ confirm the ip  once more:
 hostname
 hostname --ip-address
 ```
-3. SSH into the CLI and run these commands
-```bash
-nano /etc/ssh/sshd_config
-uncomment port 22 [add your port]
-if necessary uncomment
-PermitRootLogin and add yes
 
-reboot
-```
 4. Add dependency repositories
 ```bash
 sudo apt install curl software-properties-common apt-transport-https ca-certificates gnupg2
