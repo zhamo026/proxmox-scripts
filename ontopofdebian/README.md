@@ -40,19 +40,22 @@ sudo apt install curl software-properties-common apt-transport-https ca-certific
 #install it 
 ```bash
 echo "deb [arch=amd64] http://download.proxmox.com/debian/pve bookworm pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
-
+```
 #add it
+```bash
+
 wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg  
 ```
-#apt update && apt full-upgrade
+```bash
+apt update && apt full-upgrade
 
 ```
 
 # Install the Proxmox Kernel
 ```bash
 apt install proxmox-default-kernel -y
-
-
+```
+```bash
 apt install proxmox-ve postfix open-iscsi chrony
 ```
 Check proxmor port
