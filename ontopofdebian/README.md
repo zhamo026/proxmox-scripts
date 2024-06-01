@@ -73,7 +73,9 @@ update grub
 apt remove os-prober
 ```
 reboot
-
+```bash
+reboot
+```
 
 
 ```bash
