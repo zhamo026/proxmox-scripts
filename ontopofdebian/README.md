@@ -1,14 +1,4 @@
-# Install proxmox pve
-
-1. SSH into the CLI and run these commands
-
-```bash
-nano /etc/ssh/sshd_config
-uncomment port 22 [add your port]
-if necessary uncomment
-PermitRootLogin and add yes
-
-```
+# Check ip
 
 ```bash
 #check ip and gateway
@@ -28,13 +18,25 @@ confirm the ip  once more:
 hostname
 hostname --ip-address
 ```
+
+
+#SSH into the CLI and run these commands
+
+```bash
+nano /etc/ssh/sshd_config
+uncomment port 22 [add your port]
+if necessary uncomment
+PermitRootLogin and add yes
+
+```
+
 add dependency repositories
 
 ```bash
 sudo apt install curl software-properties-common apt-transport-https ca-certificates gnupg2
 ```
 
-                      #install it 
+#install it 
 ```bash
 echo "deb [arch=amd64] http://download.proxmox.com/debian/pve bookworm pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
 
