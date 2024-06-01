@@ -3,6 +3,14 @@
 1. SSH into the CLI and run these commands
 
 ```bash
+nano /etc/ssh/sshd_config
+uncomment port 22 [add your port]
+if necessary uncomment
+PermitRootLogin and add yes
+
+```
+
+```bash
 #check ip and gateway
 hostname --ip-address  
 ip r
