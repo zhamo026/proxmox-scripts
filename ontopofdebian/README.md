@@ -61,6 +61,8 @@ ss -tunelp | grep 8006
 10. Check kernel and remove kernel
 ```bash
 #check
+uname -r
+
 dpkg -l | grep linux-image
 #remove
 apt remove linux-image-amd64 'linux-image-6.1*' 
