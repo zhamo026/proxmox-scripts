@@ -14,7 +14,7 @@ hostnamectl set-hostname [addhostname*]
 exec bash
 
 sudo nano /etc/hosts
-192.168.2.103  [retypehostname*]
+192.168.x.x [retypehostname*]
 
 confirm the ip  once more:
 hostname
