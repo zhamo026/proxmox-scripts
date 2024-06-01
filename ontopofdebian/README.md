@@ -45,7 +45,7 @@ wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/
 ```
 7. Update
 ```bash
-apt update && apt full-upgrade
+apt update && apt full-upgrade -y
 ```
 8. Install the Proxmox Kernel
 ```bash
