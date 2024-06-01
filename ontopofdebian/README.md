@@ -33,7 +33,7 @@ hostname --ip-address
 
 4. Add dependency repositories
 ```bash
-sudo apt install curl software-properties-common apt-transport-https ca-certificates gnupg2
+apt install curl software-properties-common apt-transport-https ca-certificates gnupg2
 ```
 5. Install it 
 ```bash
