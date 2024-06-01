@@ -52,6 +52,9 @@ apt update && apt full-upgrade -y
 apt install proxmox-default-kernel -y
 ```
 ```bash
+systemctl reboot
+```
+```bash
 apt install proxmox-ve postfix open-iscsi chrony
 ```
 9.Check proxmor port
