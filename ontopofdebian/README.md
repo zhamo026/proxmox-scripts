@@ -1,4 +1,6 @@
-# Check ip
+# Installation
+
+1. Check the ip 
 
 ```bash
 #check ip and gateway
@@ -6,7 +8,8 @@ hostname --ip-address
 ip r
 ip address show
 ```
-if your ip isn't showing you need to add the ip to the local host file 
+
+2. If your ip isn't showing you need to add the ip to the local host file 
 ```bash
 hostnamectl set-hostname [addhostname*]
 exec bash
@@ -18,10 +21,7 @@ confirm the ip  once more:
 hostname
 hostname --ip-address
 ```
-
-
-#SSH into the CLI and run these commands
-
+3. SSH into the CLI and run these commands
 ```bash
 nano /etc/ssh/sshd_config
 uncomment port 22 [add your port]
@@ -30,58 +30,51 @@ PermitRootLogin and add yes
 
 reboot
 ```
-
-add dependency repositories
-
+4. Add dependency repositories
 ```bash
 sudo apt install curl software-properties-common apt-transport-https ca-certificates gnupg2
 ```
-
-#install it 
+5. Install it 
 ```bash
 echo "deb [arch=amd64] http://download.proxmox.com/debian/pve bookworm pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
 ```
-#add it
+6. Add it
 ```bash
-
 wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg  
 ```
+7. Update
 ```bash
 apt update && apt full-upgrade
-
 ```
-
-# Install the Proxmox Kernel
+8. Install the Proxmox Kernel
 ```bash
 apt install proxmox-default-kernel -y
 ```
 ```bash
 apt install proxmox-ve postfix open-iscsi chrony
 ```
-Check proxmor port
+9.Check proxmor port
 ```bash
 ss -tunelp | grep 8006
 ```
-Check kernel and remove kernel
+10. Check kernel and remove kernel
 ```bash
 #check
 dpkg -l | grep linux-image
 #remove
 apt remove linux-image-amd64 'linux-image-6.1*' 
 ```
-
-update grube
-update-grub
-
-remove prober
+11. Update the grubloader
+```bash
+update grub
+```
+12. Remove prober
+```bash
 apt remove os-prober
-
+```
 reboot
 
 
-
-
-update they keyerings
 
 ```bash
 lvremove /dev/pve/data
