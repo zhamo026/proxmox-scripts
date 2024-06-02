@@ -1,4 +1,4 @@
-# Installation
+# Installation [prxomoxwiki for more info](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm)
 
 Check the ip 
 ```bash
@@ -8,17 +8,16 @@ ip r
 ip address show
 ```
 SSH into the CLI and set an static IP and hostname must match your hostname
-```bash
 
-#to SSH
+enable SSH
+```bash
 nano /etc/ssh/sshd_config
 #uncomment port 22 [add your port]
 #if necessary uncomment
 #PermitRootLogin and add yes
-
-
-
-#modify or set  a sstatic ip
+```
+Modify or set a static ip
+```bash
 nano /etc/network/interfaces
 #example
 #auto enpxx
@@ -26,23 +25,31 @@ nano /etc/network/interfaces
         #address 192.168.x.x/24
         #netmask 255.255.xxx.x
         #gateway 192.168.x.x
-
-# to set a hostname
+```
+to set a hostname
+```bash
 hostnamectl set-hostname [addhostname*]
+```
+```bash
 exec bash
+```
 
-#to set the host ipaddress
+to set the host ipaddress
+```bash
 nano /etc/hosts
 #example
 #201.0.0.0   local.domain local add local domain
 #192.168.x.x [checkyourhostname*]
-
-#confirm the ip  once more:
+```
+confirm the ip  once more:
+```bash
 hostname
 hostname --ip-address
-
-
+```
+reboot the system
+```bash
 reboot
+
 #or reload network if running directly on CLI
 #ifdown enpxx
 #ifup enpxx
@@ -64,18 +71,9 @@ Install it
 apt install proxmox-ve postfix open-iscsi chrony -y
 ```
 
-Check proxmor port
+Check proxmox listening port
 ```bash
 ss -tunelp | grep 8006
-```
-10. Check kernel
-```bash
-#check
-uname -r
-
-#dpkg -l | grep linux-image
-#remove
-apt remove linux-image-amd64 'linux-image-6.1*' 
 ```
 
 Remove prober
@@ -87,9 +85,3 @@ reboot
 reboot
 ```
 
-
-```bash
-lvremove /dev/pve/data
-lvresize -l +100%FREE /dev/pve/root
-resize2fs /dev/mapper/pve-root
-```
