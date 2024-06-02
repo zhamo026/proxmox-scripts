@@ -85,10 +85,13 @@ reboot
 ```bash
 reboot
 ```
-#trouble shut
-check for users
-```bash
-reboot
-```
 
-sudo tasksel
+#Troubleshoot 
+add a user
+```bash
+adduser [name]
+```
+add a destop enviroment if on a laptop
+```bash
+apt install kde-plasma-desktop
+```bash
