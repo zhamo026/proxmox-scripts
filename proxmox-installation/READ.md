@@ -1,9 +1,11 @@
 # Standar installation
 
-remove repositories
+
+add the intel support
 ```bash
-bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/microcode.sh)"
 ```
+
 remove LVM if auto added
 remove it from the proxmox server direcly 
 ```bash
@@ -20,8 +22,10 @@ install a desktop enviroment if in a laptop
 apt install kde-plasma-desktop
 ```
 
-
-
+remove repositories
+```bash
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
+```
 
 
 Thanks to these sources
