@@ -15,8 +15,10 @@ lvresize -l +100%FREE /dev/pve/root
 ```bash
 resize2fs /dev/mapper/pve-root
 ```
-
-
+install a desktop enviroment if in a laptop
+```bash
+apt install kde-plasma-desktop
+```
 
 
 
