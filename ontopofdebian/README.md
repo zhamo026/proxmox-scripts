@@ -85,4 +85,10 @@ reboot
 ```bash
 reboot
 ```
+#trouble shut
+check for users
+```bash
+reboot
+```
 
+sudo tasksel
