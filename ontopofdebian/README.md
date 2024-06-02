@@ -1,4 +1,5 @@
-# Installation [prxomoxwiki for more info](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm)
+# Installation
+[prxomoxwiki for more info](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm)
 
 Check the ip 
 ```bash
