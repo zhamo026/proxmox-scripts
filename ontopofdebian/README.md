@@ -36,7 +36,9 @@ exec bash
 
 #to set the host ipaddress
 nano /etc/hosts
-#192.168.x.x [retypehostname*]
+#example
+#201.0.0.0   local.domain local add local domain
+#192.168.x.x [checkyourhostname*]
 
 #confirm the ip  once more:
 hostname
@@ -50,7 +52,7 @@ reboot
 ```
 
 
-4. Add dependency repositories
+#4. Add dependency repositories
 ```bash
 apt install curl software-properties-common apt-transport-https ca-certificates gnupg2
 ```
@@ -66,15 +68,13 @@ wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/
 ```bash
 apt update && apt full-upgrade -y
 ```
-8. Install the Proxmox Kernel
+#8. Install the Proxmox Kernel
 ```bash
 apt install proxmox-default-kernel -y
 ```
+
 ```bash
-systemctl reboot
-```
-```bash
-apt install proxmox-ve postfix open-iscsi chrony
+apt install proxmox-ve postfix open-iscsi chrony -y
 ```
 9.Check proxmor port
 ```bash
@@ -85,11 +85,11 @@ ss -tunelp | grep 8006
 #check
 uname -r
 
-dpkg -l | grep linux-image
+#dpkg -l | grep linux-image
 #remove
 apt remove linux-image-amd64 'linux-image-6.1*' 
 ```
-11. Update the grubloader
+#11. Update the grubloader
 ```bash
 update grub
 ```
