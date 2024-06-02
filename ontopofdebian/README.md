@@ -87,6 +87,18 @@ reboot
 ```
 
 #Troubleshoot 
+if network problems 
+
+``bash
+iface enpxxx inet manual #makesure you previously added the static ip
+
+auto vmbr0 #add the vmbr0
+iface vmbr0 inet dhcp      #edit if necessary
+    bridge-ports enp5s0
+    bridge-stp off
+bridge-fd 0
+``bash
+
 add a user
 ```bash
 adduser [name]
