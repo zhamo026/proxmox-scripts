@@ -1,18 +1,6 @@
 Standar Installation
+thanks to this sources
+[helper-scripts](https://helper-scripts.com/)
 
-
-#Troubleshooting 
-change IP trhough the CLI if needed
-
-
-nano /etc/network/interfaces
-
-```bash
-iface enp5s0 inet manual
-
-auto vmbr0
-iface vmbr0 inet dhcp       #edit it
-    bridge-ports enp5s0
-    bridge-stp off
-bridge-fd 0
-```
+remove repositories
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
