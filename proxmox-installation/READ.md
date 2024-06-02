@@ -1,8 +1,4 @@
-#installation
-
-Thanks to these sources
-[helper-scripts](https://helper-scripts.com/)
-[forum.proxmox.com/](https://forum.proxmox.com/threads/can-i-remove-local-and-local-lvm.122850/)
+# Standar installation
 
 remove repositories
 ```bash
@@ -19,3 +15,13 @@ lvresize -l +100%FREE /dev/pve/root
 ```bash
 resize2fs /dev/mapper/pve-root
 ```
+
+
+
+
+
+
+
+Thanks to these sources
+[helper-scripts](https://helper-scripts.com/)
+[forum.proxmox.com/](https://forum.proxmox.com/threads/can-i-remove-local-and-local-lvm.122850/)
