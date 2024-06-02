@@ -1,4 +1,4 @@
-#Standar Installation
+#installation
 
 Thanks to these sources
 [helper-scripts](https://helper-scripts.com/)
