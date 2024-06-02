@@ -103,7 +103,7 @@ add a user
 ```bash
 adduser [name]
 ```
-add a destop enviroment if on a laptop
+add a desktop enviroment if on a laptop
 ```bash
 apt install kde-plasma-desktop
 ```
