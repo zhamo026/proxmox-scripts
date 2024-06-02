@@ -94,4 +94,4 @@ adduser [name]
 add a destop enviroment if on a laptop
 ```bash
 apt install kde-plasma-desktop
-```bash
+```
