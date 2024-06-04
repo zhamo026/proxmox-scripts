@@ -17,11 +17,22 @@ lvresize -l +100%FREE /dev/pve/root
 ```bash
 resize2fs /dev/mapper/pve-root
 ```
+add user
+```bash
+adduser #name
+#add password
+```
+
+
 install a desktop enviroment if in a laptop
 ```bash
 apt install kde-plasma-desktop -y
 ```
 
+or add an nas interface
+```bash
+####
+```
 remove repositories
 ```bash
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
